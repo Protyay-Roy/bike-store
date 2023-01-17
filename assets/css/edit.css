@@ -1,0 +1,181 @@
+.header-top {
+	background: #00338a !important;
+}
+.main-menu-area {
+	background: #1455c6 !important;
+}
+.mainmenu {
+	background: #1455c6 !important;
+}
+.mainmenu nav ul li .home-menu li a{
+    background:  #1455c6 !important;
+}
+.mainmenu nav ul li .home-menu li a:hover{
+    background : #398bff !important;
+}
+.mainmenu nav ul li:hover > a, .mainmenu nav ul li.active a {
+	background : #398bff !important;
+}
+.shopping-cart {
+	background: #398bff !important;
+}
+.ajax-cart-quantity {
+	background: #FF4500 !important;
+}
+.mainmenu nav ul li .home-menu li:hover{
+	background : #398bff !important;
+}
+.mainmenu nav ul li .home-menu:before {
+    border-bottom: 10px solid #1455c6 !important;
+}
+#mainSlider img {
+    max-height: 100vh;
+}
+.new-mark-box {
+	background: rgb(0, 153, 163) none repeat scroll 0 0 !important;
+	border-radius: 3px;
+}
+.price-box span.price {
+	color: #FF4500 !important;
+}
+.single-product-price h2 {
+	color: #FF4500 !important;
+}
+.ui-widget-content {
+	width: 94%;
+	margin-left: 10px;
+}
+
+.shipping-checkout-btn a:hover {
+	background: #FF4500 !important;
+}
+.returne-continue-shop a.procedtocheckout {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+.newsletter-area {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+.add-cart-text:hover {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+.home-link-menu ul li a {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+.newsletter-area {
+	background: #393C41 none repeat scroll 0 0 !important;
+    margin-top: 0 !important;
+}
+.main-btn {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+button.update-button {
+	background: #FF4500 none repeat scroll 0 0 !important;
+    border-color: #FF4500 !important;
+}
+.welcome-info span {
+	color: #FF4500 !important;
+}
+.current-currency strong {
+	color: #FF4500 !important;
+}
+.current-lang strong {
+	color: #FF4500 !important;
+}
+.header-right-menu nav ul li a:hover {
+	color: #FF4500 !important;
+}
+.single-facality:hover {
+	border-color: #FF4500 !important;
+	box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.single-facality:hover .facality-icon {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+.info-text p a:hover {
+	color: #FF4500 !important;
+}
+.flow-us-link li a:hover {
+	background: #FF4500 !important;
+	border: 1px solid #FF4500 !important;
+}
+.single-f-widget ul li a:hover {
+	color: #FF4500 !important;
+}
+.staticblock, .Store-Information, .google-map {
+	margin-top: 10px !important;
+}
+.ui-widget-header {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+.overlay-content ul li a:hover {
+	background: #FF4500 !important;
+}
+.bstore-scrollertop:hover {
+	background: #FF4500 none repeat scroll 0 0 !important;
+}
+.slider-cap-text a:hover {
+	background: #FF4500 !important;
+}
+.slider-cap-text p {
+	color: #f7f7f7 !important;
+}
+.overlay-content ul li {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	height: 25%;
+	border-radius: 0 5px 5px 0 !important;
+}
+.single-product-item .overlay-content ul li:last-child a {
+	border-radius: 0 0 3px 0 !important;
+}
+.single-product-item .overlay-content ul li:first-child a {
+	border-radius: 0 3px 0 0 !important;
+}
+.google-map-area {
+	height: 270px !important;
+}
+#cart-summary tbody td.cart-product {
+	min-width: 200px !important;
+}
+h2.left-title {
+	margin-top: 50px;
+}
+#carouselExampleFade .carousel-inner img{
+    min-height: 450px !important;
+    max-height: 450px !important;
+}
+.thumbnail img{
+    min-height: 80px !important;
+    max-height: 80px !important;
+}
+.related-product .single-product-item .product-image img{
+    min-height: 265px !important;
+    max-height: 265px !important;
+}
+.single-product-item .product-image img{
+	border-radius: 5px;
+}
+ul.step li.step-current {
+	border-color: #399b49 #51ae5c #208931 #369946;
+	background: #42b856;
+	background: -moz-linear-gradient(#42b856, #43ab54);
+	background: -webkit-linear-gradient(#42b856, #43ab54);
+	background: -o-linear-gradient(#42b856, #43ab54);
+	background: -ms-linear-gradient(#42b856, #43ab54);
+	background: linear-gradient(rgb(221, 228, 20), rgb(172, 177, 11)) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#42b856', endColorstr='#43ab54');
+} 
+ul.step li.step-current span {
+	border-left: 1px solid #73ca77;
+	border-right: 1px solid #73ca77;
+	border-top: 1px solid #73ca77;
+	border-bottom: 1px solid #73ca77;
+	color: rgb(54, 0, 233) !important;
+	position: relative;
+	text-shadow: 1px 1px rgb(222, 232, 255) !important;
+	padding: 13px 10px 14px;
+}
+@media(min-width:480px) and (max-width:575px) {
+	.single-product-item .index_page img {
+		padding: 0 105px !important;
+	}
+}
