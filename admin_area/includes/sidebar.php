@@ -171,6 +171,12 @@
                 </ul><!-- collapse finish -->
                 
             </li><!-- li finish -->
+
+            <li><!-- li begin -->
+                <a href="index.php?pescription"><!-- a href begin -->
+                <i class="fa fa-eye" aria-hidden="true"></i> View Pescription
+                </a><!-- a href finish -->
+            </li><!-- li finish -->
             
             <li><!-- li begin -->
                 <a href="logout.php"><!-- a href begin -->

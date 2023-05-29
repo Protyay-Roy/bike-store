@@ -43,10 +43,10 @@ if (isset($_REQUEST['p_cat']) && is_array($_REQUEST['p_cat'])) {
             <li style="list-style-type: none;">
                 <label><strong>Range:</strong></label>
                 <input type="hidden" id="hidden_minimum_price" value="0" name="hidden_minimum_price" />
-                <input type="hidden" id="hidden_maximum_price" value="1000000" name="hidden_maximum_price" />
+                <input type="hidden" id="hidden_maximum_price" value="9999999" name="hidden_maximum_price" />
             </li>
 
-            <p id="price_show">৳0 - ৳1000000</p>
+            <p id="price_show">৳0 - ৳9999999</p>
             <div id="price_range"></div>
         </div>
     </div>

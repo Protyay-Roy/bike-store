@@ -52,14 +52,15 @@ if (!isset($_SESSION['admin_email'])) {
                                 <tr>
                                     <!-- tr begin -->
                                     <th> Product ID: </th>
-                                    <th> Product Title: </th>
+                                    <th> Product Title: <br> <small>Generic Name</small> </th>
+                                    <!-- <th> Product : </th> -->
                                     <th> Product Image: </th>
                                     <th> Product Price: </th>
                                     <th> Product Status: </th>
                                     <th> Product Keywords: </th>
                                     <th> Product Date: </th>
-                                    <th> Product Delete: </th>
-                                    <th> Product Edit: </th>
+                                    <th> Action: </th>
+                                    <!-- <th> Product Edit: </th> -->
                                 </tr><!-- tr finish -->
                             </thead><!-- thead finish -->
 
@@ -68,45 +69,52 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <?php
 
-                                    $s = "SELECT * FROM `product`";
+                                $s = "SELECT * FROM `product`";
 
-                                    if ($q = $con->query($s)) {
+                                if ($q = $con->query($s)) {
 
-                                        $i = 0;
-                                        while ($r = $q->fetch_array()) {
-                                            $pro_id = $r["p_id"];
-                                            $i++;
+                                    $i = 0;
+                                    while ($r = $q->fetch_array()) {
+                                        $pro_id = $r["p_id"];
+                                        $i++;
                                 ?>
 
                                         <tr>
                                             <td><?= $i; ?></td>
-                                            <td><?= $r["p_title"]; ?></td>
+                                            <td><?= $r["p_title"]; ?>
+                                            <br> <small><?= $r["p_generic_name"];?></small>
+                                        </td>
+                                            <!-- <td><?= $r["p_generic_name"]; ?></td> -->
                                             <td>
                                                 <img src="../admin_area/product_images/<?= $r["p_img1"]; ?>" alt="<?= $r["p_img1"]; ?>" style="height: 50px;">
                                             </td>
-                                            <td>$ <?= $r["p_price"]; ?></td>
+                                            <td>৳ <?= number_format($r["p_price"], 2, '.', ','); ?></td>
 
                                             <td><?= $r["p_type"]; ?></td>
 
                                             <td><?= $r["invoice_no"]; ?></td>
 
                                             <td><?= $r["date"]; ?></td>
-                                            <td>
+                                            <td style="display: flex;">
                                                 <a href="index.php?delete_product=<?= $pro_id; ?>" class="btn btn-danger">
 
-                                                    <i class="fa fa-trash-o"></i> Delete
+                                                    <i class="fa fa-trash-o"></i>
 
+                                                </a>
+                                                <a href="index.php?edit_product=<?= $r["p_id"]; ?>" class="btn btn-success" style="margin-left: 5px;">
+                                                    <i class="fa fa-pencil"></i>
                                                 </a>
 
                                             </td>
-                                            <td>
+                                            <!-- <td>
                                                 <a href="index.php?edit_product=<?= $r["p_id"]; ?>" class="btn btn-success">
                                                     <i class="fa fa-pencil"></i> Edit
                                                 </a>
-                                            </td>
+                                            </td> -->
                                         </tr>
 
-                                <?php } }   ?>
+                                <?php }
+                                }   ?>
 
                             </tbody><!-- tbody finish -->
 

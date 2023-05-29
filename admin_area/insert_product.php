@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin_email'])) {
         <title> Insert Products </title>
 
         <style>
-            label{
+            label {
                 text-align: left !important;
                 margin-bottom: 5px !important;
             }
@@ -94,6 +94,20 @@ if (!isset($_SESSION['admin_email'])) {
                                     <div class="form-group">
                                         <!-- form-group Begin -->
 
+                                        <label class="col-md-12 control-label"> Product Generic Name </label>
+
+                                        <div class="col-md-12">
+                                            <!-- col-md-12 Begin -->
+
+                                            <input name="product_generic_name" type="text" class="form-control">
+
+                                        </div><!-- col-md-12 Finish -->
+
+                                    </div><!-- form-group Finish -->
+
+                                    <div class="form-group">
+                                        <!-- form-group Begin -->
+
                                         <label class="col-md-12 control-label"> Products Brands </label>
 
                                         <div class="col-md-12">
@@ -156,6 +170,44 @@ if (!isset($_SESSION['admin_email'])) {
                                     <div class="form-group">
                                         <!-- form-group Begin -->
 
+                                        <label class="col-md-12 control-label"> Product Price </label>
+
+                                        <div class="col-md-12">
+                                            <!-- col-md-12 Begin -->
+
+                                            <input name="product_price" type="text" class="form-control" required>
+
+                                        </div><!-- col-md-12 Finish -->
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+
+
+                                    <div class="form-group">
+                                        <!-- form-group Begin -->
+
+                                        <label class="col-md-12 control-label"> Product type </label>
+
+                                        <div class="col-md-12">
+                                            <!-- col-md-12 Begin -->
+
+                                            <select name="product_type" class="form-control">
+                                                <!-- form-control Begin -->
+
+                                                <option value="NEW"> NEW</option>
+                                                <option value="SALE"> SALE</option>
+
+
+                                            </select><!-- form-control Finish -->
+
+                                        </div><!-- col-md-12 Finish -->
+
+                                    </div><!-- form-group Finish -->
+
+                                    <div class="form-group">
+                                        <!-- form-group Begin -->
+
                                         <label class="col-md-12 control-label"> Product Image 1 </label>
 
                                         <div class="col-md-12">
@@ -194,294 +246,24 @@ if (!isset($_SESSION['admin_email'])) {
                                         </div><!-- col-md-12 Finish -->
 
                                     </div><!-- form-group Finish -->
-
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Product type </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <select name="product_type" class="form-control">
-                                                <!-- form-control Begin -->
-
-                                                <option value="NEW"> NEW</option>
-                                                <option value="SALE"> SALE</option>
-
-
-                                            </select><!-- form-control Finish -->
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Product Price </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="product_price" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Engine Type </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="engine_type" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Max Power </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="max_power" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Max Torque </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="max_torque" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Max Speed </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="max_speed" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Fule Type </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="fule_type" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
                                 </div>
 
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
+                                <div class="form-group">
+                                    <!-- form-group Begin -->
 
-                                        <label class="col-md-12 control-label"> Cooling System </label>
+                                    <label class="col-md-12 control-label"></label>
 
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
+                                    <div class="col-md-12">
+                                        <!-- col-md-12 Begin -->
+                                        <input type="hidden" id="block" value="<?= date("d-m-Y"); ?>">
 
-                                            <input name="cooling_system" type="text" class="form-control" required>
 
-                                        </div><!-- col-md-12 Finish -->
+                                        
+                                        <input name="submit" value="Insert Product" type="submit" class="btn btn-primary form-control">
 
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
+                                    </div><!-- col-md-12 Finish -->
 
-                                        <label class="col-md-12 control-label"> Gear </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="gear" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Mileage </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="mileage" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Dimention </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="dimention" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Fuel Capacity </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="fuel_capacity" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Height </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="height" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Color </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="color" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Battery </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="battery" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Head Light </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="h_light" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Back Light </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="b_light" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Signal Light </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="s_light" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Front Break </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="front_break" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                    <div class="form-group">
-                                        <!-- form-group Begin -->
-
-                                        <label class="col-md-12 control-label"> Back Break </label>
-
-                                        <div class="col-md-12">
-                                            <!-- col-md-12 Begin -->
-
-                                            <input name="back_break" type="text" class="form-control" required>
-
-                                        </div><!-- col-md-12 Finish -->
-
-                                    </div><!-- form-group Finish -->
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <!-- form-group Begin -->
-
-                                <label class="col-md-12 control-label"></label>
-
-                                <div class="col-md-12">
-                                    <!-- col-md-12 Begin -->
-
-                                    <input name="submit" value="Insert Product" type="submit" class="btn btn-primary form-control">
-
-                                </div><!-- col-md-12 Finish -->
-
-                            </div><!-- form-group Finish -->
+                                </div><!-- form-group Finish -->
 
                         </form><!-- form-horizontal Finish -->
 
@@ -509,6 +291,7 @@ if (!isset($_SESSION['admin_email'])) {
     if (isset($_POST["submit"])) {
 
         $product_title = $_POST["product_title"];
+        $product_generic_name = $_POST["product_generic_name"];
         $product_cat = $_POST["product_cat"];
         $cat = $_POST["cat"];
         $product_price = $_POST["product_price"];
@@ -544,7 +327,7 @@ if (!isset($_SESSION['admin_email'])) {
         $temp2 = $_FILES["product_img2"]["tmp_name"];
         $temp3 = $_FILES["product_img3"]["tmp_name"];
 
-        $s = "INSERT INTO `product`(`cat_id`, `p_cat_id`,`date`, `p_title`, `p_img1`, `p_img2`, `p_img3`, `p_price`, `invoice_no`,`p_type`) VALUES ('$cat',$product_cat,NOW(),'$product_title','$product_img1','$product_img2','$product_img3','$product_price','$invoice_no','$product_type')";
+        $s = "INSERT INTO `product`(`cat_id`, `p_cat_id`,`date`, `p_title`, `p_generic_name`, `p_img1`, `p_img2`, `p_img3`, `p_price`, `invoice_no`,`p_type`) VALUES ('$cat',$product_cat,NOW(),'$product_title','$product_generic_name','$product_img1','$product_img2','$product_img3','$product_price','$invoice_no','$product_type')";
 
         if ($con->query($s)) {
 
@@ -552,18 +335,20 @@ if (!isset($_SESSION['admin_email'])) {
             move_uploaded_file($temp2, "product_images/$product_img2");
             move_uploaded_file($temp3, "product_images/$product_img3");
 
-            $addAttr = "INSERT INTO `bike_attr`(`engine_type`, `max_power`, `max_torque`, `max_speed`, `fule_type`, `cooling_system`, `gear`, `mileage`, `dimention`, `fuel_capacity`, `height`, `color`, `battery`, `h_light`, `b_light`, `s_light`, `front_break`, `back_break`) VALUES ('$engine_type','$max_power','$max_torque','$max_speed','$fule_type','$cooling_system','$gear','$mileage','$dimention','$fuel_capacity','$height','$color','$battery','$h_light','$b_light','$s_light','$front_break','$back_break')";
+            // $addAttr = "INSERT INTO `bike_attr`(`engine_type`, `max_power`, `max_torque`, `max_speed`, `fule_type`, `cooling_system`, `gear`, `mileage`, `dimention`, `fuel_capacity`, `height`, `color`, `battery`, `h_light`, `b_light`, `s_light`, `front_break`, `back_break`) VALUES ('$engine_type','$max_power','$max_torque','$max_speed','$fule_type','$cooling_system','$gear','$mileage','$dimention','$fuel_capacity','$height','$color','$battery','$h_light','$b_light','$s_light','$front_break','$back_break')";
 
-            $addQuery = $con->query($addAttr);
-            if($addQuery){
+            // $addQuery = $con->query($addAttr);
+            // if ($addQuery) {
 
-                echo "<script>alert('Product has been inserted sucessfully')</script>";
-                echo "<script>window.open('index.php?view_products','_self')</script>";
+            //     echo "<script>alert('Product has been inserted sucessfully')</script>";
+            //     echo "<script>window.open('index.php?view_products','_self')</script>";
+            // } else {
+            //     echo "<script>alert('Attr Insert Failed')</script>";
+            // }
+            
 
-            }else{
-                echo "<script>alert('Attr Insert Failed')</script>";
-
-            }
+            echo "<script>alert('Product has been inserted sucessfully')</script>";
+            echo "<script>window.open('index.php?view_products','_self')</script>";
         } else {
             echo "<script>alert('Failed')</script>";
         }

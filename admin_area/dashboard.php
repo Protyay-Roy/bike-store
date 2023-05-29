@@ -315,7 +315,7 @@ if (!isset($_SESSION["admin_email"])){
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus tempore non ut velit, nesciunt totam, perspiciatis corrupti expedita nulla aut necessitatibus eius nisi. Unde quasi, recusandae doloribus minus quisquam.
                         
                     </p><!-- p finish -->
-                    
+                    <input type="hidden" id="block" value="<?= date("d-m-Y"); ?>">
                 </div><!-- mb-md finish -->
                 
             </div><!-- panel-body finish -->

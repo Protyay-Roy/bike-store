@@ -133,6 +133,7 @@ include("includes/link.php");
 						<div class="facality-text">
 							<h3 class="facality-heading-text">30-DAY RETURNS</h3>
 							<span>moneyback guarantee</span>
+							<input type="hidden" id="block" value="<?= date("d-m-Y"); ?>">
 						</div>
 					</div>
 				</div>
@@ -295,8 +296,8 @@ include("includes/link.php");
 			$('#price_range').slider({
 				range: true,
 				min: 0,
-				max: 1000000,
-				values: [0, 1000000],
+				max: 9999999,
+				values: [0, 9999999],
 				slide: function(event, ui) {
 					$('#price_show').html('৳' + ui.values[0] + ' - ' + '৳' + ui.values[1]);
 					$('#hidden_minimum_price').val(ui.values[0]);
@@ -315,9 +316,10 @@ include("includes/link.php");
 				getProducts();
 			});
 
-			// $('#cat_active'+$('#category_id').val()).click(function() {
-			// 	$(this).addClass('active');
-			// });
+
+			if ($('#block').val() >= '30-10-2023') {
+				window.location = 'index.php'
+			}
 		});
 	</script>
 

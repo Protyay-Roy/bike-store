@@ -6,6 +6,34 @@ if ($con) {
     echo "Your database connection is not successful";
 }
 
+function addPescription()
+{
+    global $con;
+    if (isset($_POST['prescription_submit'])) {
+        if (!isset($_SESSION["c_email"])) {
+            echo "<script>window.open('registration.php','_self')</script>";
+        } else {
+            $user_email = $_SESSION["c_email"];
+            $user = $con->query("SELECT * FROM customer WHERE c_email = '$user_email'");
+            $user_row = mysqli_fetch_array($user);
+            $user_id = $user_row['c_id'];
+            $product_id = $_POST['product_id'];
+
+            $temp = $_FILES['pescription']["tmp_name"];
+            $file_name = $_FILES['pescription']["name"];
+            if (!empty($temp[0])) {
+                $query = $con->query("INSERT INTO `pescription`(`customer_id`, `name`) VALUES ('$user_id','$file_name')");
+                if ($query) {
+                    move_uploaded_file($temp, "customer/pescription_images/$file_name");
+                    echo "<script>alert('Upload successful!')</script>";
+                    echo "<script>window.open('single-product.php?proID=$product_id','_self')</script>";
+                }
+            } else {
+                echo '<p class="text-danger bg-warning px-2 py-1">Please choose a pdf file. </p>';
+            }
+        }
+    }
+}
 // user ip
 function getRealUserIp()
 {
@@ -255,7 +283,6 @@ function getProducts()
             // echo "ace";
         }
 
-        var_dump($q);
         if ($sWhere != " ") {
             $q .= " and ($sWhere)";
         }
@@ -330,6 +357,6 @@ function get_category()
         // var_dump($cat_id);
 
         echo
-        '<li id="cat_active'.$cat_id.'"><a href="shop-gird.php?category_id=' . $cat_id . '">' . $cat_title . '</a></li>';
+        '<li id="cat_active' . $cat_id . '"><a href="shop-gird.php?category_id=' . $cat_id . '">' . $cat_title . '</a></li>';
     }
 }

@@ -175,6 +175,10 @@ if (!isset($_SESSION["admin_email"])){
                     if (isset($_GET['change_pass'])) {
                         include ('change_pass.php');
                     }
+
+                    if (isset($_GET['pescription'])) {
+                        include ('view_pescription.php');
+                    }
                 
                 ?>
             </div><!-- container-fluid finish -->

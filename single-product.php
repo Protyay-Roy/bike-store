@@ -53,6 +53,7 @@
 		$pro_img3 = $imgRow["p_img3"];
 		$pro_price = $imgRow["p_price"];
 		$pro_title = $imgRow["p_title"];
+		$pro_gen_name = $imgRow["p_generic_name"];
 		$pro_catId = $imgRow["cat_id"];
 		$p_type = $imgRow["p_type"];
 
@@ -130,141 +131,58 @@
 							</div>
 							<!-- thumb row Finish -->
 						</div>
-						<div class="col-lg-7 col-md-8">
 
+
+						<div class="col-lg-7 col-md-8">
 							<?php addCart(); ?>
 
-							<form action="single-product.php?addCart=<?= $p_id; ?>" method="POST">
-								<div class="single-product-descirption">
-									<h2><?= $pro_title; ?></h2>
-									<div class="single-product-social-share">
-										<ul>
-											<li><a href="#" class="twi-link"><i class="fa fa-twitter"></i>Tweet</a></li>
-											<li><a href="#" class="fb-link"><i class="fa fa-facebook"></i>Share</a></li>
-											<li><a href="#" class="g-plus-link"><i class="fa fa-google-plus"></i>Google+</a>
-											</li>
-											<li><a href="#" class="pin-link"><i class="fa fa-pinterest"></i>Pinterest</a>
-											</li>
-										</ul>
-									</div>
-									<div class="single-product-condition">
-										<p>Condition: <span><?= $p_type; ?> product</span></p>
-									</div>
-									<div class="single-product-price">
-										<h2>৳<?= $pro_price; ?></h2>
-									</div>
-
-									<div class="row">
-										<div class="col-6">
-											<h5 style="background: #fd946d; color:#fff; margin-bottom:8px;padding:3px">Engine Details</h5>
-											<table class="table table-scripted table-bordered">
-												<tr>
-													<th width="40%" style="color: #444;">Engine Type :</th>
-													<td><?= $attrRow['engine_type']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Max Power :</th>
-													<td><?= $attrRow['max_power']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Max Torque :</th>
-													<td><?= $attrRow['max_torque']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Max Speed :</th>
-													<td><?= $attrRow['max_speed']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Engine Type :</th>
-													<td><?= $attrRow['fule_type']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Fule Type :</th>
-													<td><?= $attrRow['cooling_system']; ?></td>
-												</tr>
-											</table>
-											<table class="table table-scripted table-bordered">
-												<h5 style="background: #fd946d; color:#fff; margin-bottom:8px; margin-top:8px;padding:3px">Body Dimention</h5>
-
-												<tr>
-													<th width="40%" style="color: #444;">Dimention :</th>
-													<td><?= $attrRow['dimention']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Fuel Capacity :</th>
-													<td><?= $attrRow['fuel_capacity']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Bike Height :</th>
-													<td><?= $attrRow['height']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Bike Color :</th>
-													<td><?= $attrRow['color']; ?></td>
-												</tr>
-											</table>
-										</div>
-										<div class="col-6">
-											<table class="table table-scripted table-bordered">
-												<h5 style="background: #fd946d; color:#fff; margin-bottom:8px;padding:3px">Gear & Mileage</h5>
-												<tr>
-													<th width="40%" style="color: #444;">Gear :</th>
-													<td><?= $attrRow['gear']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Mileage :</th>
-													<td><?= $attrRow['mileage']; ?></td>
-												</tr>
-											</table>
-											<table class="table table-scripted table-bordered">
-												<h5 style="background: #fd946d; color:#fff;padding:3px">Electrical</h5>
-
-												<tr>
-													<th width="40%" style="color: #444;">Bike Battery :</th>
-													<td><?= $attrRow['battery']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Head Light :</th>
-													<td><?= $attrRow['h_light']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Back Light :</th>
-													<td><?= $attrRow['b_light']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Side Light :</th>
-													<td><?= $attrRow['s_light']; ?></td>
-												</tr>
-											</table>
-											<table class="table table-scripted table-bordered">
-												<h5 style="background: #fd946d; color:#fff; margin-bottom:8px;padding:3px">Brakes</h5>
-
-												<tr>
-													<th width="40%" style="color: #444;">Front Break :</th>
-													<td><?= $attrRow['front_break']; ?></td>
-												</tr>
-												<tr>
-													<th width="40%" style="color: #444;">Back Break :</th>
-													<td><?= $attrRow['back_break']; ?></td>
-												</tr>
-											</table>
-
-										</div>
-									</div>
-
-									<div class="single-product-quantity">
-										<p class="small-title">Quantity</p><br>
-										<div class="cart-quantity">
-											<div class="cart-plus-minus-button single-qty-btn">
-												<input class="cart-plus-minus sing-pro-qty" type="text" name="qtybutton" value="1" required>
+							<div class="row">
+								<div class="col-md-8">
+									<form action="single-product.php?addCart=<?= $p_id; ?>" method="POST">
+										<div class="single-product-descirption">
+											<h2 style="margin-bottom: 0;padding-bottom: 0;"><?= $pro_title; ?></h2>
+											<small><?= "(" . $pro_gen_name . ")" ?></small>
+											<div class="single-product-social-share">
+												<ul>
+													<li><a href="#" class="twi-link"><i class="fa fa-twitter"></i>Tweet</a></li>
+													<li><a href="#" class="fb-link"><i class="fa fa-facebook"></i>Share</a></li>
+													<li><a href="#" class="g-plus-link"><i class="fa fa-google-plus"></i>Google+</a>
+													</li>
+													<li><a href="#" class="pin-link"><i class="fa fa-pinterest"></i>Pinterest</a>
+													</li>
+												</ul>
+											</div>
+											<div class="single-product-condition">
+												<p>Condition: <span><?= $p_type; ?> product</span></p>
+											</div>
+											<div class="single-product-price">
+												<h2>৳<?= $pro_price; ?></h2>
+											</div>
+											<div class="single-product-quantity">
+												<p class="small-title">Quantity</p><br>
+												<div class="cart-quantity">
+													<div class="cart-plus-minus-button single-qty-btn">
+														<input class="cart-plus-minus sing-pro-qty" type="text" name="qtybutton" value="1" required>
+													</div>
+												</div>
+											</div>
+											<div class="single-product-add-cart">
+												<button class="add-cart-text">Add to cart</button>
 											</div>
 										</div>
-									</div>
-									<div class="single-product-add-cart">
-										<button class="add-cart-text">Add to cart</button>
-									</div>
+									</form>
 								</div>
-							</form>
+								<div class="col-md-4">
+								<?php addPescription(); ?>
+								<h5>Add Pescription</h5>
+								<hr>
+									<form method="post" enctype="multipart/form-data"> 
+										<input type="file" name="pescription" class="form-control">
+										<input type="hidden" name="product_id" class="form-control" value="<?= $p_id; ?>">
+										<button class="btn btn-success mt-2" name="prescription_submit" style="margin-left: 130px;">submit</button>
+									</form>
+								</div>
+							</div>
 						</div>
 					</div>
 					<!-- SINGLE-PRODUCT-DESCRIPTION END -->
@@ -347,7 +265,7 @@
 								<?php
 								if (!isset($_SESSION["c_email"])) {
 
-									
+
 									echo "<center><h5 class='m-3 p-2'> Please Login first. <a href='registration.php'><small class='text-primary'> Click Here </small></a></h5> </center>";
 								} else {
 									$imgQ = "SELECT * FROM customer WHERE c_email = '{$_SESSION["c_email"]}'";
@@ -365,7 +283,7 @@
 											<i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
 										</h4>
 										<div class="form-group">
-											<input type="text" name="user_name" id="user_name" class="form-control" value="<?= $name; ?>" readonly/>
+											<input type="text" name="user_name" id="user_name" class="form-control" value="<?= $name; ?>" readonly />
 										</div>
 										<div class="form-group mt-3">
 											<textarea name="user_review" id="user_review" class="form-control" placeholder="Type Review Here"></textarea>
